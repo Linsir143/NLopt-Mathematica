@@ -39,7 +39,7 @@ PacletUninstall@PacletFind["NLopt"]
 ## Quick Start
 
 ```mathematica
-<< "NLopt.wl"
+<<NLopt`
 
 (* Objective function *)
 objFunc = (x^2 + y^2) - 10 Cos[2 Pi x] - 10 Cos[2 Pi y] + 20;
