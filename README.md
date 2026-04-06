@@ -19,10 +19,22 @@ Or install it in Mathematica with the following code:
 PacletInstall["https://github.com/Linsir143/NLopt-Mathematica/releases/download/v1.0.0/NLopt-1.0.0.paclet"];
 (*PacletObject[Name: NLopt
 Version: 1.0.0]*)
-
+```
+Check if the installation was successful:
+```
+PacletFind["NLopt**"]
+```
+Test if it works properly:
+```
+<<NLopt`;
 NLoptMinimize[(x^2+y^2+z^2)^2-3 (x^3 y+y^3 z+x z^3),{x,y,z},RandomReal[{-1,1},{10,3}],Equalities->{x+y+z==1}]
 NLoptMinimize[(x^2+y^2+z^2)^2-3 (x^3 y+y^3 z+x z^3)/.z->1,{x,y},RandomReal[{-1,1},{10,2}]]
 ```
+To uninstall:
+```
+PacletUninstall@PacletFind["NLopt"] 
+```
+
 
 ## Quick Start
 
